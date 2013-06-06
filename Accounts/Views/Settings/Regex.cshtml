@@ -1,0 +1,38 @@
+﻿@using Accounts
+@using Accounts.BLL
+@model IEnumerable<Accounts.Models.Entities.RecordRegex>
+@{ ViewBag.Title = "General Settings"; }
+
+@Html.Partial("_Styles")
+@Html.Partial("_Scripts")
+<link rel="stylesheet" href="~/Content/css/Settings.css">
+<script type="text/javascript" src="~/Content/js/Accounts.Settings.Regex.js"></script>
+
+<div id="main" class="oh">
+    @Html.Partial("_Header")   
+    
+    <div id="content">
+        @Html.Partial("_Menu")
+        
+        <div id="right">
+            <div id="topPanel"><span>REGEX FILTERS SETTINGS</span></div>
+            <div class="regexSettings m300l p20b">
+                <div class="oh p45t">
+                    <div class="dt">
+                        <div class="dtr">
+                            <div class="dtc"><input id="regexAdd" type="text" placeholder="Add Regex" /></div>
+                            <div class="dtc">
+                                @Html.OptgroupSelect(StaticData.RecordSubtypes.Where(i=>i.Id > 0))
+                            </div>
+                            <div class="dtc"><input id="addRegex" type="button" class="button" value="Add" /></div>
+                        </div>
+                    </div>
+                    <div class="dt" id="regexList">
+                        @Html.Partial("_RegexList", Model)
+                    </div>
+                    </div>
+                
+            </div>
+        </div>
+    </div>
+</div>

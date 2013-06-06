@@ -1,0 +1,13 @@
+﻿@model ModelStateDictionary
+@* This is a custom ValidationSummary to produce own output *@
+
+@if (!Model.IsValid)
+{
+    <div class="fl balloon">
+        <span class="arrow">&nbsp;</span>
+        @foreach (var modelError in Model.SelectMany(keyValuePair => keyValuePair.Value.Errors))
+        {
+            @modelError.ErrorMessage <br/>
+        }
+    </div>
+}

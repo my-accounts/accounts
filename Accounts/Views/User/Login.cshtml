@@ -1,0 +1,38 @@
+﻿@using System.Web.Mvc.Html
+@model Accounts.Models.LoginModel
+
+@using (Html.BeginForm(new { ReturnUrl = ViewBag.ReturnUrl })) {
+    @Html.AntiForgeryToken()
+
+    <link rel="stylesheet" href="~/Content/css/login.css">
+    
+    <div id="main" class="oh" style="font-size: 16px;">
+        <div class="container">
+            <div>
+                <div>
+                    <div class="content">
+                            
+                        <h1>Please Login</h1>
+                        <div class="error">@Html.ValidationSummary(true)</div>
+                        <div class="loginBox">
+                            @Html.TextBoxFor(m => m.UserName)
+                        </div>
+                        <div class="loginBox">
+                            @Html.PasswordFor(m => m.Password)
+                        </div>
+                        <div class="checkBox">
+                            <input id='RememberMe' type='checkbox' value='true' name='RememberMe'>
+                            <label for='RememberMe'>Remember me</label>
+                            <input type='hidden' value='false' name='RememberMe'>
+                        </div>
+                        <input class="loginButton _rel bglgr butt hand white" type="submit" value="Login" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <style>
+        #form0 { font-size: 0px; }
+    </style>
+}

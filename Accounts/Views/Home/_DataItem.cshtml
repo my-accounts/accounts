@@ -1,0 +1,42 @@
+﻿@using Accounts
+@using Accounts.BLL
+@model Accounts.Models.Entities.Record
+
+<tr data-id="@Model.RecordId">
+    <td class="acc">@(StaticData.Companies.First(i=>i.CompanyId == Model.CompanyId).Name)</td>
+    <td>@Model.Date.ToShortDateString()</td>
+    
+    <td class="reference"><div>@Model.Reference</div></td>
+    
+    <td>@(Model.IsIncome ? String.Empty : Model.Amount.ToString("C"))</td>
+    <td>@(Model.IsIncome ? Model.Amount.ToString("C") : String.Empty)</td>
+    <td class="type">@(StaticData.RecordTypes.First(i=>i.Id == StaticData.RecordSubtypes.First(k => k.SubtypeId == Model.SubtypeId).TypeId).Name)</td>
+    <td>
+        @Html.OptgroupSelect(StaticData.RecordSubtypes, Model.SubtypeId)
+    </td>
+    <td>
+        @if (Model.SubtypeId == 0)
+        {
+            <div class="addCategory popupHandler2 bglgr hand"></div>
+        }            
+    </td>
+    <td class="comment">
+        <div class="oh">
+            <div class="fl"><input class="rel u6" type="text" maxlength="250" value="@Model.Comment" title="@Model.Comment" /></div>
+            <div class="fl clearSearch cross hand"></div>
+        </div>
+    </td>
+    <td class="attach w100">
+        @if (Model.Attachment.Length > 0)
+        {
+            @Html.Partial("_Attachment", Model.Attachment)
+        }
+        else
+        {
+            <div class="fileContainer hand">
+                <div class="addFile"></div>
+                <input type="file"/>
+            </div>
+        }
+    </td>
+</tr>  

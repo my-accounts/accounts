@@ -1,0 +1,53 @@
+﻿@{ ViewBag.Title = "Upload your data files"; }
+@using Accounts
+@using Accounts.BLL
+@model IEnumerable<Accounts.Models.ViewModels.Home.UploadItemViewModel>
+    
+@Html.Partial("_Styles")
+@Html.Partial("_Scripts")
+
+<link rel="stylesheet" href="~/Content/css/upload.css">
+<script type="text/javascript" src="~/Content/js/Accounts.UploadPage.js"></script>
+
+<div id="main" class="oh">
+    @Html.Partial("_Header")
+    <div id="content">
+        @using (Html.BeginForm("Upload", "Upload", FormMethod.Post, new { enctype = "multipart/form-data" }))
+        {
+            <div class="header">
+                <div>
+                    <div class="icon"></div>
+                    <div class="uploader">
+                        <div class="uploaderFirst dt">
+                            <div class="dtc">DROP FILES INTO THE ICON OR&nbsp;</div>
+                            <div class="dtc fileBlock hand">
+                                <div class="filePicker">BROWSE</div>
+                                <input type="file" name="files" multiple="multiple" />
+                                <input type="hidden" id="uploadCount" value="0" />
+                            </div>
+                        </div>
+                        <div class="uploaderSecond">(Upload multiple bank statements)</div>
+                        <div class="oh" style="margin-top: 15px;">
+                            <div class="fl">
+                                @Html.SelectBox("company", StaticData.Companies)
+                            </div>
+                            <div class="fl">
+                                <input type="submit" value="UPLOAD FILES" class="uploadButton" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+                
+        <div class="history">
+            <div>
+                <div>HISTORY UPLOADS</div>
+                <div class="sepa"></div>
+                <div id="history">
+                    @Html.Partial("_UploadItems", Model)
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

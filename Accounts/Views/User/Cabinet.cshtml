@@ -1,0 +1,54 @@
+﻿@model Accounts.Models.LocalPasswordModel
+@{ ViewBag.Title = "Manage Account"; }
+
+@Html.Partial("_Styles")
+@Html.Partial("_Scripts")
+<link rel="stylesheet" href="~/Content/css/UserCabinet.css">
+
+<div id="main" class="oh">
+    @Html.Partial("_Header")   
+    
+    <div id="content">
+        <div class="header">
+            <h2>MANAGE ACCOUNT</h2>
+            @if (string.IsNullOrEmpty(ViewBag.StatusMessage))
+            {
+                <h3>You are logged as @User.Identity.Name</h3>
+            }
+            else
+            {
+                <h3>@ViewBag.StatusMessage</h3>
+            }
+        </div>
+        
+        @if (ViewBag.HasLocalPassword)
+        {
+            using (Html.BeginForm("Cabinet", "User")) {
+                
+                @Html.AntiForgeryToken()
+
+                <div class="form">
+                    <div>CHANGE PASSWORD</div>
+                    <div class="oh">
+                        <div class="fl w190">Current password</div>
+                        <div class="fl">@Html.PasswordFor(m => m.OldPassword)</div>
+                    </div>
+                    <div class="oh">
+                        <div class="fl w190">New password</div>
+                        <div class="fl">@Html.PasswordFor(m => m.NewPassword)</div>
+                        @Html.Partial("ValidationSummary", ViewData.ModelState)
+                    </div>
+                    <div class="oh">                        
+                        <div class="fl w190">Confirm new password</div>
+                        <div class="fl">@Html.PasswordFor(m => m.ConfirmPassword)</div>
+                    </div>
+                </div>
+                <input type="submit" class="changeButton" value="CHANGE" />
+            }
+        }
+        else
+        {
+            <div>You are not a local user, thus this page is not available for you.</div>
+        }
+    </div>
+</div>

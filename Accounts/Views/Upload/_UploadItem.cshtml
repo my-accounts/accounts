@@ -1,0 +1,9 @@
+﻿@model Accounts.Models.ViewModels.Home.UploadItemViewModel
+
+<div class="panel">@Model.Date.DayOfWeek, @Model.Date.ToShortDateString() at @Model.Date.ToShortTimeString() <span class="tr hand cls l5 d4 expand"></span></div>
+<div class="children">
+    @foreach (var file in Model.Files)
+    {
+        @Html.Partial("_UploadFile", file)
+    }
+</div>

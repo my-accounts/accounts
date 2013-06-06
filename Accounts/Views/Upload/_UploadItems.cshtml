@@ -1,0 +1,24 @@
+﻿@model IEnumerable<Accounts.Models.ViewModels.Home.UploadItemViewModel>
+
+@if (Model.Count() == 0)
+{
+    <div style="font-style: italic; font-weight: normal; margin-top: 10px;">There have not been any data upload so far ...</div>
+}
+
+@foreach (var uploadItem in Model)
+{
+    @Html.Partial("_UploadItem", uploadItem)
+}
+
+@if (Model.Count() > 8)
+{
+    <div class="older">older ..</div>
+}
+
+<script>
+
+    // Shows only 7 first panels
+    $('.panel').each(function (idx, obj) {
+        if (idx > 7) { $(obj).hide(); }
+    });
+</script>

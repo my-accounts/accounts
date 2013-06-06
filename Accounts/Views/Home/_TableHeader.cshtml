@@ -1,0 +1,33 @@
+﻿@{
+    var isDateHidden = ViewBag.SortingColumn == "date" ? String.Empty : "hidden";
+    var isReferenceHidden = ViewBag.SortingColumn == "reference" ? String.Empty : "hidden";
+    var sortingDirection = ViewBag.SortingDirection == "asc" ? "collapse" : "expand";
+}        
+
+<tr>
+    <th class="w100">COMPANY</th>
+    <th class="w100 oh">
+        @{
+            <div id="date" class="fl hand sortable">DATE</div>
+            <div class="fl tr @sortingDirection rel l5 d12 @isDateHidden"></div>
+        }
+    </th>
+    <th class="mw150 oh">
+        @{
+            <div id="reference" class="fl hand sortable">REFERENCE</div>
+            <div class="fl tr @sortingDirection rel l5 d12 @isReferenceHidden"></div>
+        }
+    </th>
+    <th class="w50">OUT</th>
+    <th class="w50">IN</th>
+    <th class="w100 oh">
+        @{
+            <div id="type" class="fl hand">TYPE</div>
+            <div class="fl tr expand rel l5 d12 hidden"></div>
+        }
+    </th>
+    <th class="w150">SUBTYPE</th>
+    <th class="w50">ADD</th>
+    <th class="w150">COMMENTS</th>
+    <th>ATTACH</th>
+</tr>

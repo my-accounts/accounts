@@ -1,0 +1,32 @@
+﻿@{ ViewBag.Title = "Types and Subtypes Settings"; }
+@model Accounts.Models.ViewModels.Settings.TypesSubtypesViewModel
+
+@Html.Partial("_Styles")
+@Html.Partial("_Scripts")
+<link rel="stylesheet" href="~/Content/css/Settings.css">
+<script src="~/Content/jqueryUI/jquery-ui.js"></script>
+<script src="~/Content/js/Accounts.Settings.TypesSubtypes.js"></script>
+
+<div id="main" class="oh">
+    @Html.Partial("_Header")   
+    
+    <div id="content">
+        @Html.Partial("_Menu")
+
+        <div id="right">
+            <div id="topPanel"><span>TYPES AND SUBTYPES SETTINGS</span></div>
+
+            <div class="typesSettings m300l">
+                <div class="oh p45t p50b">
+                    <div class="addNewType m30l">
+                        <input id="newType" type="text" placeholder="Create Type" />
+                    </div>
+                    <div id="typesList">
+                        @Html.Partial("_TypesList", Model)
+                    </div>
+                </div>
+            </div>
+        </div>
+        @*<br /><br /><br /><br /><br />*@
+    </div>
+</div>

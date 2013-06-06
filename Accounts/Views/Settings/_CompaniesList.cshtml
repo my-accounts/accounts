@@ -1,0 +1,6 @@
+﻿@model IEnumerable<Accounts.Models.Entities.Company> 
+
+@foreach (var company in Model)
+{
+    @Html.Partial("_CompanyItem", company)
+}

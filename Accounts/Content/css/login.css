@@ -1,0 +1,27 @@
+﻿html, body, #form0, #main { height: 100%; }
+#main { background: url('../img/patt.png') repeat; }
+
+h1 { margin: 0; padding: 0; font-family: Arial; font-size: 32px; font-weight: bold; }
+div.container { position: absolute; left: 35%; top: 20%; }
+div.container > div { width: 363px; height: 330px; background-color: #24a679; position: relative; border-radius: 5px; }
+div.container > div > div { background-color: white; position: absolute; height: 333px; bottom: 0; width: 100%;border-radius: 5px; }
+            
+
+div.content { margin: 30px 33px 0 33px; color: #606060; }
+            
+div.content > div { margin-top: 14px;  margin-bottom: 14px;  }
+
+#validationSummary ul li { border-radius: 3px; background-color: #969696; font-size: 12px; color: white; 
+                        padding: 5px 5px 5px 30px; background-image: url('../img/error.png'); background-repeat: no-repeat; background-position: 7px 6px; }
+
+
+div.content .loginBox { border-radius: 3px; height: 38px; line-height: 38px; border: solid 1px green; }
+div.content .loginBox input { margin-left: 10px; width: 270px; color: #666; border: none; outline: none; }
+            
+div.content .loginBox input:focus::-webkit-input-placeholder { color:transparent; }
+div.content .loginBox input:focus:-moz-placeholder { color:transparent; }
+            
+div.content .checkBox { height: 38px; line-height: 26px; font-size: 14px;}
+div.content .loginButton { line-height: 26px; font-size: 14px; border-radius: 4px; padding: 10px 25px 10px 25px; border: solid 0px transparent; display: inline;}
+
+#validationSummary ul { list-style-type: none;margin: 0;padding: 0;}

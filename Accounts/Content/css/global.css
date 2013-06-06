@@ -1,0 +1,170 @@
+﻿/* -------------- Whole tags ---------------- */
+
+a { text-decoration: none; color: white; }
+
+/* -------------- Layouts styles ---------------- */
+
+.fl { float: left; }
+.fr { float: right; }
+.oa { overflow: auto; }
+.oh { overflow: hidden; }
+
+
+
+
+
+.bold { font-weight: bold; }
+.italic { font-style: italic; }
+
+/* -------------- Fonts ---------------- */
+.font12 { font-size: 12px; } 
+.font14 { font-size: 14px; } 
+.font16 { font-size: 16px; } 
+
+
+
+/* -------------- Colors ---------------- */
+.black { color: black; }
+.white { color: white; }
+.green { color: green; }
+.red { color: red; }
+.lgr { color: #28bb89; }
+.c666 { color: #666; }
+.cAC { color: #acacac; }
+
+.bglgr { background-color: #28bb89; }
+.bglg { background-color: #acacac; }
+.pink { background-color: pink; }
+
+/* -------------- Margins ---------------- */
+.m10t { margin-top: 10px; }
+.m15t { margin-top: 15px; }
+.m20t { margin-top: 20px; }
+.m25t { margin-top: 25px; }
+.m80t { margin-top: 80px; }
+.m10r { margin-right: 10px; }
+.m20r { margin-right: 20px; }
+.m50r { margin-right: 50px; }
+
+.m10b { margin-bottom: 10px; }
+.m15b { margin-bottom: 15px; }
+.m20b { margin-bottom: 20px; }
+
+.m10l { margin-left: 10px; }
+.m20l { margin-left: 20px; }
+.m25l { margin-left: 25px; }
+.m30l { margin-left: 30px; }
+.m40l { margin-left: 40px; }
+.m100l { margin-left: 100px; }
+.m300l { margin-left: 300px; }
+
+/* -------------- Paddings ---------------- */
+.p10l { padding-left: 10px; }
+.p20l { padding-left: 20px; }
+.p40l { padding-left: 40px; }
+.p100l { padding-left: 100px; }
+
+.p5t { padding-top: 5px; }
+.p10t { padding-top: 10px; }
+.p20t { padding-top: 20px; }
+.p30t { padding-top: 30px; }
+.p45t { padding-top: 45px; }
+
+
+.p20r { padding-right: 20px; }
+
+.p20b { padding-bottom: 20px; }
+.p50b { padding-bottom: 20px; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.just { text-align: justify; }
+
+
+/* -------------- Debug ---------------- */
+.bord { border: solid 1px orange; }
+.bg { background-color: pink; }
+
+
+/* -------------- Width and Height ---------------- */
+.w20 { width: 20px; }
+.w50 { width: 50px; }
+.w100 { width: 100px; }
+.w150 { width: 150px; }
+.w190 { width: 190px; }
+.w200 { width: 200px; }
+.w300 { width: 300px; }
+.w350 { width: 350px; }
+
+.h0 { height: 0px; }
+.h5 { height: 5px; }
+.h10 { height: 10px; }
+.h18 { height: 18px; }
+.h20 { height: 20px; }
+.h25 { height: 25px; }
+.h30 { height: 30px; }
+.h32 { height: 32px; }
+.h125 { height: 125px; }
+
+.wFull { width: 100%; }
+.mw150 { min-width: 150px; }
+
+
+
+
+
+
+
+.left15 { position: relative; left: -15px; }
+
+
+/* -------------- Cursor ---------------- */
+.hand { cursor: pointer; }
+
+/* -------------- Position ---------------- */
+.rel {  position: relative; } 
+.center { text-align: center; }
+
+.u6 { top: -6px; }
+.u10 { top: -10px; }
+
+.d4 { position: relative; top: 4px; }
+.d5 { position: relative; top: 5px; }
+.d12 { top: 12px; }
+
+.l5 { position: relative; left: 5px; }
+
+/* -------------- Borders ---------------- */
+.br5 { border-radius: 5px; }
+
+
+/* -------------- Display ---------------- */
+.db { display: block; }
+.dt { display: table; }
+.dtr { display: table-row; }
+.dtc { display: table-cell; }
+.dib { display: inline-block; }
+.none { display: none; }
+
+.div { display: inline-block; *display: inline;zoom: 1; }
+
+
+/* ---- Italic style for placeholders ---- */
+input[type=text]::-webkit-input-placeholder { font-style: italic; }
+input[type=text]:-moz-placeholder { font-style: italic;}

@@ -1,0 +1,194 @@
+﻿html, body, #main /*, #content*/ { height: 100%; }
+
+input { outline: none; }
+
+#top { height: 60px;  background: url('../img/patt.png') repeat-x; }
+#top div.title { float: left; font-family: Arial; font-size: 23px; width: 218px; margin: 14px 0 0 20px; }
+#top div.menuItem { float: left; font-family: Arial; font-size: 14px; line-height: 48px;height: 48px; margin: 6px 0px 0px 6px; padding-left: 40px; padding-right: 40px; }
+#top div.active { background-color: #292929; border-radius: 5px; cursor: default; line-height: 48px;}
+
+
+/*#top { position: fixed;top: 0;width: 100%;z-index: 50; }
+#content { margin-top: 60px; }*/
+
+#top .user { float: right; width: 58px; height: 60px;background-color: #28ba88;background-image: url('../img/account@2x.png');
+             background-repeat: no-repeat; background-size: 21px 21px; background-position: center; }
+
+#content { overflow: auto; }
+ 
+#left { float: left ; background-color: #ededed; width: 218px; height: 100%; }
+.lb { background: linear-gradient(to right, rgba(226,226,226,0) 212px,rgba(200,200,200,1) 218px); }
+
+
+#filters div:first-child { padding: 20px 0px 0px 30px; font-size: 15.5px; height: 32px; }
+#filters div:first-child input[type="checkbox"]+label:before { box-shadow: inset 1px 1px 2px rgba(50,190,142,.3), inset 0 0 0 1px rgba(50,190,142,.2);  }
+.fc { background-color: #e2e2e2;}
+
+
+/* Separators (horizontal lines */
+.sepa3 { background-color: #d7d7d7;  height: 3px; margin-left: 40px !important; width: 150px !important; }
+div.sepa1 { background-color: #d7d7d7;  height: 1px; margin: 10px 0px 0px 0px; width: 150px !important; }
+.tabSepa { height: 3px; background-color: #d7d7d7; margin-right: 60px; }
+
+
+
+#accountsNew { font-size: 12px; padding-left: 30px; margin-top: 17px; margin-bottom: 4px; }
+#accountsNew .container div { margin-top: 15px; height: 15px; }
+
+#finyear { font-size: 12px; padding-left: 30px; margin-top: 5px; margin-bottom: 4px; }
+
+
+#subtypes { font-size: 12px; padding-left: 30px; margin-top: 5px; margin-bottom: 4px; }
+#subtypes .container div { margin-top: 15px; height: 15px; }
+
+
+
+
+/* -Right part of the table below this line --- */
+#topPanel { height: 48px; background-color: #f3f3f3; padding-top: 6px; overflow: hidden; }
+#summary { height: 40px; line-height: 40px; margin-left: 12px; margin-right: 0px; padding: 0px 7px 0px 7px; border-radius: 5px; background-color: #eaeaea; }
+
+
+
+
+.triangle-border:after { border-color: #FFFFFF transparent; border-style: solid; border-width: 13px 13px 0; bottom: -13px; content: ""; display: block; left: 47px; position: absolute; width: 0; }
+.triangle-border.left:after { border-width: 6px 8px 5px 0; left: -7px; top: 14px; border-color: transparent #FFFFFF; bottom: auto; }
+.triangle-border.left:before { border-width: 7px 9px 6px 0; left: -9px; top: 13px; border-color: transparent #C5C5C5; bottom: auto; }
+.triangle-border:before { border-color: #C5C5C5 transparent; border-style: solid; border-width: 20px 20px 0; bottom: -20px; content: ""; display: block; left: 40px; position: absolute; width: 0; }
+.triangle-border.left { margin-left: 25px; margin-right: 20px; }
+.triangle-border { background: none repeat scroll 0 0 #FFFFFF; border: 1px solid #C5C5C5; border-radius: 6px; padding-left: 15px; position: relative; line-height: 38px; height: 40px; /*width: 800px;*/ }
+
+.bub { height: 31px; margin-top: 4px; border-radius: 4px; margin-left: 10px; line-height: 29px; text-align: center; padding-left: 20px; padding-right: 20px; } 
+.sum { background-color: #efefef; }
+.down {margin-left: 100px; margin-right: 6px; }
+
+
+
+#search {
+    width: 250px; 
+    line-height: 38px; height: 40px;
+    border: 1px solid #C5C5C5; border-radius: 6px;
+    padding-left: 30px; padding-right: 0px; 
+    background-color: white;
+
+    background-image: url('../img/search@2x.png'), url('../img/close@2x.png');
+    background-position: left top, right center;
+    background-size: 27px 37px, 10px 10px;
+    background-repeat: no-repeat;
+    background-position: 0px 0px, 263px 14px;
+}
+
+#search input { border: none;outline: none; font-size: 16px; width: 225px; color: #666; margin-top: 9px; }
+#search .cross { width: 20px; height: 23px; margin-top: 7px; }
+
+
+
+#tableAndTotal { margin-left: 238px; margin-top: 30px; margin-bottom: 30px; }
+
+#table {  margin-right: 60px; }
+#table table { width: 100%; }
+#table tr { border-bottom-style: solid; border-color: #c0c0c0; border-width: 1px; height: 35px; line-height: 35px;font-size: 12px; }
+#table tr:not(:first-child):hover { background-color: #efefef; }
+#table th { height: 40px; line-height: 40px; text-align: left; padding-left: 7px; }
+#table td { padding-left: 7px; padding-right: 7px; }
+
+#table td.acc { white-space: nowrap; }
+#table td.type { white-space: nowrap; }
+
+
+
+
+#table td.reference { white-space: nowrap; }
+
+@media all and (max-width: 1520px) {
+
+    #table td.reference { width: 320px; }
+    #table td.reference > div { width: 300px; text-overflow: ellipsis; overflow: hidden; }
+
+    div.tabSepa, div#table { margin-right: 20px; }
+}
+@media all and (max-width: 1400px) {
+
+    #table td.reference { width: 210px; }
+    #table td.reference > div { width: 190px; text-overflow: ellipsis; overflow: hidden; }
+}
+
+
+
+
+.attach a { color: #666; text-decoration: underline; }
+
+
+
+
+.addFile { 
+    width: 40px; height: 27px; border-radius: 5px; 
+    background-image: url('../img/upload@2x.png'); background-size: 19px 16px; background-repeat: no-repeat; background-position: 11px 5px; }
+
+
+.fileContainer { overflow: hidden; position: relative; width: 45px; }
+.fileContainer [type=file] {
+    cursor: inherit; display: block;
+    font-size: 999px;
+    filter: alpha(opacity=0); opacity: 0;
+    min-height: 100%;
+    min-width: 100%;
+    position: absolute; right: 0; top: 0;
+}
+
+
+.comment > div:first-child {
+    background-color: white;
+    width: 137px; height: 23px; border-radius: 5px; border: solid 0px #c5c5c5; 
+    background-image: url('../img/close@2x.png'); background-size: 8px 8px; background-repeat: no-repeat; background-position: 125px 7px;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2) inset, 0 0 0 1px rgba(0, 0, 0, 0.1) inset;
+}
+.comment input { border: none; margin-left: 5px; margin-right: 4px; width: 115px; color: #666; outline: none; }
+.comment .cross { width: 10px; height: 18px; margin-top: 2px; } 
+
+
+.addCategory { 
+    width: 40px; height: 27px; border-radius: 5px;  /*background-color: #25ac7e;*/
+    background-image: url('../img/edit@2x.png'); background-size: 24px 24px; background-repeat: no-repeat; background-position: 7px 0px; }
+
+
+.removeFile { width: 8px; height: 8px; background-image: url('../img/close@2x.png'); background-size: 8px 8px; margin: 13px 0px 0px 8px; }
+
+
+
+
+
+
+/* popup */
+#addNew { background-color: #efefef; padding-left: 10px;  padding-right: 10px;  height: 135px; }
+#addNew > div { margin: 7px 0 0 10px; }
+#addNew .butt { padding-left: 10px; padding-right: 10px; display: inline-block; height: 25px; line-height: 25px; border-radius: 5px; }
+
+
+/* triangle sorting */
+.tr { background-image: url("../jqueryUI/images/ui-icons_222222_256x240.png"); height: 16px; width: 16px; position: relative; }
+.expand { background-position: -64px -16px; }
+.collapse { background-position: 0px -16px; }
+
+
+
+
+
+
+/* new expander collapser */
+.cls {display: inline-block; position: relative;  left: 5px; }
+
+
+/* Nice dropdowns */
+select { width: 140px; height: 20px; }
+select a { text-decoration: none; }
+
+
+/* Overridden styles for "Add New Filter" box */
+.popup2 select { width: 310px; }
+/*.popup2 .comment { width: 350px; }*/
+.popup2 .comment > div:first-child { width: 310px; background-position: 293px 8px; }
+.popup2 .comment input { width: 282px; }
+.popup2 .clearSearch { position: relative; left: -20px;}
+
+.spinner { display: none; font-style: italic; }

@@ -1,0 +1,50 @@
+﻿@using Accounts
+@{ ViewBag.Title = "General Settings"; }
+@model Accounts.Models.ViewModels.Settings.GeneralSettingsViewModel
+
+@Html.Partial("_Styles")
+@Html.Partial("_Scripts")
+<link rel="stylesheet" href="~/Content/css/Settings.css">
+<script type="text/javascript" src="~/Content/js/Accounts.Settings.General.js"></script>
+
+<div id="main" class="oh">
+    @Html.Partial("_Header")   
+    
+    <div id="content">
+        @Html.Partial("_Menu")
+
+        <div id="right">
+            <div id="topPanel"><span>GENERAL SETTINGS</span></div>
+
+            <div class="generalSettings m300l p50b">
+                <div class="oh p45t">
+                    <div class="fl m50r w200">CREATE COMPANY NAME</div>
+                    <div class="fl">
+                        <div class="m20b"><input id="newCompany" type="text" maxlength="18" /></div>
+                        <div id="companiesList">
+                            @Html.Partial("_CompaniesList", Model.Companies)
+                        </div>
+                    </div>
+                    <div class="fl"><input id="addCompany" type="button" class="button" value="Add" /></div>
+                </div>
+               
+
+                <div class="oh p30t">
+                    <div class="fl m50r w200">FIRST DAY OF THE YEAR</div>
+                    <div class="fl h30">
+                        @Html.SelectBox("startDates", Model.YearStartDates, Model.SelectedYearStartDate)
+                    </div>
+                </div>
+                @*
+                    <div class="oh p30t">
+                        <div class="fl m50r w200">DATABASE NAME</div>
+                        <div class="fl">
+                            <input type="text" value="Accounts" readonly="readonly" />
+                        </div>
+                        <div class="fl"><input id="saveDb" type="button" class="button" value="CHANGE" /></div>
+                    </div>
+                *@
+            </div>
+        </div>
+    </div>
+</div>

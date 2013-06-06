@@ -1,0 +1,11 @@
+﻿@using Accounts
+@using Accounts.BLL
+@model Accounts.Models.Entities.RecordRegex
+
+<div class="dtr" data-id="@Model.Id">
+    <div class="dtc"><input type="text" class="ri" data-old="@Model.Name" value="@Model.Name" maxlength="250" /></div>
+    <div class="dtc">
+        @Html.OptgroupSelect(StaticData.RecordSubtypes, Model.SubtypeId)
+        <span class="removeFile dib hand" title="Delete"></span>
+    </div>
+</div>

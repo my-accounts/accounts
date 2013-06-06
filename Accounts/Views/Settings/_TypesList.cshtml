@@ -1,0 +1,20 @@
+﻿@model Accounts.Models.ViewModels.Settings.TypesSubtypesViewModel
+
+@foreach (var type in Model.Types)
+{
+    <div data-id="@type.Id">
+        <span class="tr hand cls l5 d4 collapse m10r"></span>
+        <input type="text" class="typeInput" data-old="@type.Name" value="@type.Name" maxlength="250" />
+        
+        @if (type.Id > 0)
+        {
+            <span class="removeFile typeDel dib hand" title="Delete"></span>
+        }
+        else
+        {
+            <span id="collapseAll" class="col italic font12 hand p100l c666">collapse all</span>
+        }
+        
+    </div>
+    @Html.Partial("_SubtypesList", Model.Subtypes.Where(i=>i.TypeId == type.Id))
+}

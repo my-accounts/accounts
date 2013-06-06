@@ -1,0 +1,28 @@
+﻿@model IEnumerable<Accounts.Models.Entities.RecordSubtype>
+
+<div class="st">
+    <div>
+        <span class="subtypeArr"></span>
+        <input type="text" class="subtypeAdd" placeholder="Create Subtype" />
+    </div>
+</div>
+
+@{
+    string dropClass = Model.Any(i => i.TypeId != 0) ? "dropme" : String.Empty;
+}
+
+<div class="st @dropClass">
+    
+    @foreach (var subtype in Model)
+    {
+        <div class="m100l" data-typeid="@subtype.TypeId" data-id="@subtype.Id">
+            <input class="subtypeInput" type="text" data-old="@subtype.Name" value="@subtype.Name" maxlength="250" />
+
+            @if (subtype.Id > 0)
+            {
+                <span class="removeFile subtypeDel dib hand" title="Delete"></span>
+            }
+        </div>
+    }
+
+</div>

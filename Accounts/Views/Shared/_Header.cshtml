@@ -1,0 +1,22 @@
+﻿<div id="top" class="white">
+                
+    <div class="title lgr">MY ACCOUNTS</div>
+    
+    @{
+        var homeActive = Request.AppRelativeCurrentExecutionFilePath.ToLower() == "~/" ? "active" : String.Empty;
+        var uploadActive = Request.AppRelativeCurrentExecutionFilePath.ToLower() == "~/upload" ? "active" : String.Empty;
+        var settingsActive = Request.AppRelativeCurrentExecutionFilePath.ToLower().Contains("/settings/") ? "active" : String.Empty;
+    }
+
+    <a href="~/"><div class="menuItem @homeActive">HOME</div></a>
+    <a href="~/Upload"><div class="menuItem @uploadActive">UPLOAD</div></a>
+    <a href="~/Settings/General"><div class="menuItem @settingsActive">SETTINGS</div></a>
+               
+    <a id="pop" class="popupHandler1" href="#" title="User"><div class="user"></div></a>
+                
+    <!-- Overlay for all popups, it is invisible -->
+    <a id="bubble" class="overlay" href="#"></a>
+                
+    @Html.Partial("UserCabinet")
+            
+</div>

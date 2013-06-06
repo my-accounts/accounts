@@ -1,0 +1,73 @@
+﻿#content { font-size: 14px; }
+#left { background-color: #666;  }
+.lb { background: linear-gradient(to right, rgba(102, 102, 102, 0) 200px, #4C4C4C 218px) repeat scroll 0 0 transparent; }
+
+#topPanel span { color: #333; margin-left: 20px; margin-top: 10px;display: inline-block; }
+
+.mi { width: 218px; height: 40px; margin-bottom: 1px; background-size: 24px 24px; background-position: 36px 8px; background-repeat: no-repeat; background-color: #434343;}
+.sel { background-color: #28bb89; }
+.mi span { margin-left: 75px; padding-top: 10px; line-height: 40px; color: white; }
+
+.general { background-image: url('../img/iconGeneral.png');  }
+.types { background-image: url('../img/iconTypes.png'); }
+.regexes { background-image: url('../img/iconRegex.png'); }
+
+
+input[type=text] { border-radius: 3px; border: solid 1px #C5C5C5; padding: 2px 0px 2px 10px; }
+
+
+/*
+    General    
+*/
+
+.generalSettings input[type=text] { width: 190px; }
+input[type=text].ci { background-color: #666;color: white; } 
+
+select { width: 200px; border-radius: 3px; border: solid 1px #C5C5C5; font-size: 12px; padding-top: 1px; height: 21px;}
+
+.button {
+    margin-left: 35px;
+    font-size: 14px;
+    border-radius: 6px;
+    padding: 5px 20px 5px 20px;
+    border: solid 0px transparent;
+    display: inline;
+    background-color: #28bb89;
+    color: white;
+    box-shadow: 1px 1px 1px #888;
+}
+
+/* fix position for the text within dropdown */
+.generalSettings .ui-selectmenu-status { padding-top: 0.25em ; }
+
+/*
+    Regex    
+*/
+.regexSettings input[type=text] { width: 320px; background-color: #DCDCDC; border-color: #C5C5C5; font-size: 12px; }
+.regexSettings .dt .dtr:first-child .dtc { padding-top: 20px; }
+.regexSettings .dt .dtr .dtc:first-child { padding-right: 50px; }
+.regexSettings .dt:first-child .dtr input[type=text] { background-color: white; }
+
+
+
+
+
+/*
+    Types / Subtypes
+*/
+.typesSettings input { width: 200px; border-radius: 5px; height: 22px; margin-top: 5px; margin-bottom: 5px; }
+.typesSettings input:focus { border-color: #28bb89; }
+.addNewType { margin-bottom: 15px; }
+
+.typeInput { background-color: #666; color: white; }
+.subtypeInput { background-color: #DCDCDC; color: black; }
+
+.subtypeArr { background-image: url('../img/iconArrow.png'); background-size: 41px 9px; background-position: 40px 0px; background-repeat: no-repeat;
+    width: 97px;height: 9px; display: inline-block; }
+
+#collapseAll { }
+#collapseAll:hover { text-decoration: underline; }
+
+.dropme > div { cursor: move; }
+
+/*input:-moz-placeholder { font-style: italic; }*/

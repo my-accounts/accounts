@@ -1,0 +1,6 @@
+﻿@model IEnumerable<Accounts.Models.Entities.RecordRegex>
+
+@foreach (var regex in Model.OrderBy(i => i.SubtypeId))
+{
+    @Html.Partial("_RegexItem", regex)
+}

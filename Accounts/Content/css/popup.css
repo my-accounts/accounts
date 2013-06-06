@@ -1,0 +1,51 @@
+﻿.popupUsername { border-bottom: solid 1px #c5d9e8; padding: 5px 0 5px 10px; }
+.popupUsername { color: #666; text-transform: uppercase; }
+.popupExit { padding: 5px 0 5px 10px; color: #666; }
+
+.popupUsername:hover { background-color: #28bb89; }
+.popupUsername:hover { color: white; }
+#logoutForm:hover { background-color: #28bb89; }
+#logoutForm:hover a div { color: white; }
+
+.overlay {
+    right: 0; top: 0; bottom: 0; left: 0; opacity: 0;
+    cursor: default; position: fixed; visibility: hidden; z-index: 1;
+}
+.popup { display: inline-block; opacity: 0; visibility: hidden; position: relative; top: 64px; left: 58px; z-index: 10; float: right; }
+
+
+
+.popup .callout {
+    width: 150px; height: 55px;
+    position: relative;
+    background-color: white;
+  }
+
+.callout .notch {
+    position: absolute; top: -5px; left: 170px;
+    margin: 0; padding: 0; border-top: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 5px solid white;
+    width: 0; height: 0;
+    /* ie6 height fix */
+    font-size: 0;
+    line-height: 0;
+    /* ie6 transparent fix */
+    _border-right-color: pink;
+    _border-left-color: pink;
+    _filter: chroma(color=pink);
+}
+
+.popup .callout .notch { left: 120px; }
+
+.border-callout { border: 1px solid #C1C1C1; /*padding: 17px 19px;*/ }
+.border-callout .border-notch { border-bottom-color: #818181; top: -6px; }
+
+.popup2 { display: inline-block; opacity: 0; visibility: hidden; position: absolute; /*left: 0;top: 0;*/ z-index: 10; /*float: right;*/ }
+.popup2 .callout { position: fixed; background-color: white; }
+.popup2 .callout .notch { border-bottom: 5px solid  #efefef; }
+.popup2 .border-callout .border-notch { border-bottom-color: #818181; top: -6px; }
+
+/* Finally add fancy shadow to this modal box */
+#addNew { box-shadow: 8px 8px 5px #888; }

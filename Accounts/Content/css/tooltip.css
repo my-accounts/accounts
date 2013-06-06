@@ -1,0 +1,6 @@
+﻿
+a.tooltip { color: #000; }
+a.tooltip b { display:none; }
+a.tooltip:hover { border:0; position:relative; z-index:500; text-decoration:none; }
+a.tooltip:hover b { display: block; position: absolute; /*top: 20px; */ left: 75px; padding: 5px; font-weight: normal; border:1px solid #888; background: #ffc; /*width: 350px;*/ }
+/*a.tooltip:hover b em { position:absolute; left:20px; top:-6px; width:11px; height: 6px; background:#fff url('../img/_tooltip.gif') 0 0; display:block; font-size:1px; }*/

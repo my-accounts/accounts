@@ -1,0 +1,10 @@
+﻿@using Accounts
+@using Accounts.BLL
+@using Accounts.Models
+@model Accounts.Models.ViewModels.Home.UploadFileViewModel
+
+<div data-id="@Model.UploadFileId">
+    <a href="@(VirtualPathUtility.ToAbsolute(Settings.VirtualPath.ArchiveFolder) + Model.Filename)">@Model.Filename</a>
+    @Html.SelectBox("uf" + Model.UploadFileId, StaticData.Companies, Model.CompanyId)
+    <span class="removeFile hand" title="Delete"></span>
+</div>
