@@ -92,9 +92,11 @@
     
     // Disable upload button if we do not have any company set up so far
     if ($('#company').val() == null) {
+        
         $('.uploadButton').attr("disabled", "disabled");
+        $('.uploadButton').css("background-color", "#ACACAC");
     } else {
-        $('.uploadButton').removeAttr("disabled"); 
+        $('.uploadButton').removeAttr("disabled");
     }
 });
 

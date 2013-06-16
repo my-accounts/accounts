@@ -130,7 +130,8 @@ function refreshData() {
     $.post(ControllerActions.Home.RefreshData, getParameters(), function (result) {
         if (result.length > 0) {
 
-            if (result.startsWith('<!DOCTYPE')) {
+            var starter = result.substring(0, 9);
+            if (starter == '<!DOCTYPE') {
                 window.location.replace(rootPath + "User/Login?ReturnUrl=%2fAccounts%2fHome%2fRefreshData");
             }
 

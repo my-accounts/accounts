@@ -84,7 +84,7 @@ function submitPopup() {
             for (var i = 0; i < ids.length; i++) {
 
                 // Remove green 'adding' badge  - we do not need it aanymore
-                $('.addCategory').hide();
+                $('tr[data-id=' + ids[i] + '] div.addCategory').hide();
 
                 // Update subtype select box with new value
                 $('tr[data-id=' + ids[i] + '] td select').val(subtypeId);
