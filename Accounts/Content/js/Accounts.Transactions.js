@@ -175,7 +175,7 @@ function getParameters() {
 function afterDataRefreshed(result) {
 
     // Apply resulting markup to our table container
-    $('#tableAndTotal').html(result);
+    $('#data').html(result);
 
     $('#totalRecords').text(result.length-1);
 

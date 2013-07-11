@@ -2,73 +2,97 @@
 @using Accounts.BLL
 @{ ViewBag.Title = "Transactions"; }
 
-    @Html.Partial("_Styles")
-    @Html.Partial("_Scripts")
-    <script type="text/javascript" src="~/Content/js/Accounts.Transactions.js"></script>
+@Html.Partial("_Styles")
+@Html.Partial("_Scripts")
+<script type="text/javascript" src="~/Content/js/Accounts.Transactions.js"></script>
 
-    <div id="main" class="oh">
-        @Html.Partial("_Header")   
-        @Html.Partial("_AddNewFilter")
-    
-        <div id="content">
-            <div id="left" class="brd lb">
+<div id="main" class="oh">
+    @Html.Partial("_Header")
+      
+    <!--Overlay for all popups, it is invisible -->
+    <a id="bubble" class="overlay" href="#"></a>
+            
+    @Html.Partial("_AddNewFilter")
+
+    <div id="content" class="dt wFull">
+        <div id="left" class="dtc lb">
                 
-                <!-- Tri-state checkboxes start -->
-                <div class="tri-state font12">
-                    <div>
-                        <span class="lb fc db h18"></span>
-                        <input type="checkbox" name="_all" id="_all"><label for="_all" style="">ALL FILTERS <span class="spinner">&nbsp;&nbsp;&nbsp;.. (working) ..</span> </label> 
-                        <span  class="lb fc db h32"></span>
-                        <div class="lb fc"><div class="sepa3"></div></div>
+            <!-- Tri-state checkboxes start -->
+            <div class="tri-state font12">
+                <div>
+                    <span class="lb fc db h18"></span>
+                    <input type="checkbox" name="_all" id="_all"><label for="_all" style="">ALL FILTERS <span class="spinner">&nbsp;&nbsp;&nbsp;.. (working) ..</span> </label> 
+                    <span  class="lb fc db h32"></span>
+                    <div class="lb fc"><div class="sepa3"></div></div>
 
-                        <div>
-                            <div class="m10t">
-                                <input type="checkbox" name="_allAccounts" id="_allAccounts"><label for="_allAccounts">ACCOUNTS</label><span class="tr hand cls l5 d4"></span>
+                    <div>
+                        <div class="m10t">
+                            <input type="checkbox" name="_allAccounts" id="_allAccounts"><label for="_allAccounts">ACCOUNTS</label><span class="tr hand cls l5 d4"></span>
                          
-                                @Html.Chechboxes("_account", StaticData.Companies)                     
-                                <div class="lb"><div class="sepa1"></div></div>
+                            @Html.Chechboxes("_account", StaticData.Companies)                     
+                            <div class="lb"><div class="sepa1"></div></div>
+                        </div>
+                        <div class="m10t">
+                            <input type="checkbox" name="_allYears" id="_allYears"><label for="_allYears">YEARS</label><span class="tr hand cls l5 d4"></span>
+                            @Html.Chechboxes("_year", StaticData.Years)
+                            <div class="lb"><div class="sepa1"></div></div>
+                        </div>
+                        <div class="m10t">
+                            <input type="checkbox" name="_types" id="_types"><label for="_types">TYPES</label><span class="tr hand cls l5 d4"></span>
+                            <div>
+                                @Html.SubtypesCheckboxes(StaticData.RecordSubtypes)
                             </div>
-                            <div class="m10t">
-                                <input type="checkbox" name="_allYears" id="_allYears"><label for="_allYears">YEARS</label><span class="tr hand cls l5 d4"></span>
-                                @Html.Chechboxes("_year", StaticData.Years)
-                                <div class="lb"><div class="sepa1"></div></div>
-                            </div>
-                            <div class="m10t">
-                                <input type="checkbox" name="_types" id="_types"><label for="_types">TYPES</label><span class="tr hand cls l5 d4"></span>
-                                <div>
-                                    @Html.SubtypesCheckboxes(StaticData.RecordSubtypes)
-                                </div>
-                                <div class="lb"><div class="sepa1"></div></div>
-                            </div>
+                            <div class="lb"><div class="sepa1"></div></div>
                         </div>
                     </div>
                 </div>
-                <!-- Tri-state checkboxes end -->
+            </div>
+            <!-- Tri-state checkboxes end -->
+        </div>
+
+        <div id="right" class="dtc wFull">
+            <div id="topPanel" class="dt wFull">
+                <div class="dtc">
+                    <div id="ipadMenu"></div>
+                </div>
+                <div class="dtc">
+                    <div id="summary">SUMMARY</div>
+                </div>
+                <div class="dtc wFull p10l p10r">
+                    <div class="triangle-border left dt wFull" style="max-width: 900px;">
+                        <div class="dtc">
+                            <div class="m10l m10r">TOTAL</div>
+                        </div>    
+                        <div class="dtc wFull">
+                            <div class="dt p10l p10r wFull">
+                                <div class="dtc oh">
+                                    <div class="fr">
+                                        <div id="outLabel" class="fl lgr">OUT:</div>
+                                        <div id="totalInBox" class="bub sum fl"></div>
+                                    </div>
+                                </div>
+                                <div class="dtc oh">
+                                    <div id="inLabel" class="fl lgr m20l">IN:</div>
+                                    <div id="totalOutBox" class="bub sum fl m10r"></div>
+                                </div>
+                            </div>                                
+                        </div>    
+                        <div class="dtc">
+                            <div class="bub down bglgr fl white hand">GET&nbsp;EXCEL</div>
+                        </div>    
+                    </div>                        
+                </div>
+                <div class="dtc">
+                    <div id="search" class="oh"> 
+                        <div class="fl"><input id="searchBox" type="text" name="name" placeholder="Search..." maxlength="120"></div>
+                        <div class="fl clearSearch cross hand"></div> 
+                    </div>                        
+                </div>
             </div>
                 
-            <div id="right">
-                <div id="topPanel">
-                    <div id="summary" class="fl" style="">SUMMARY</div>
-                    <div class="triangle-border left fl">
-                        <div class="fl">TOTAL</div>
-
-                        <div id="outLabel" class="fl lgr m100l">OUT:</div>
-                        <div id="totalInBox" class="bub sum fl"></div>
-                        <div id="inLabel" class="fl lgr m40l">IN:</div>
-                        <div id="totalOutBox" class="bub sum fl"></div>
-                        <div class="bub down bglgr fl white hand">DOWNLOAD EXCEL</div>
-                    </div>
-                    <div id="search" class="fl oh">
-                        <div class="fl"><input id="searchBox" type="text" name="name" placeholder="Search..." maxlength="120" /></div>
-                        <div class="fl clearSearch cross hand"></div> 
-                    </div>
-
-                </div>
-                <input id="sortingColumn" type="hidden" value="" />
-                <input id="sortingDirection" type="hidden" value="" />
-            
-                <div id="tableAndTotal" class="font14"></div>
-                <div>&nbsp;</div>
-            </div>
+            <input id="sortingColumn" type="hidden">
+            <input id="sortingDirection" type="hidden">            
+            <div id="data" class="m15l m20t"></div>
         </div>
     </div>
+</div>

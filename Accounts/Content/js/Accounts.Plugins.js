@@ -4,7 +4,6 @@
 
 ------------------------------------------------------------------------------*/
 
-
 // Avoid `console` errors in browsers that lack a console.
 (function() {
     var method;
@@ -32,9 +31,9 @@
 
 // returns true if there's a `vertical` scrollbar, false otherwise..
 (function ($) {
-    $.fn.hasScrollBar = function () {
+    $.fn.hasScrollBar = function() {
         return this.get(0).scrollHeight > this.height();
-    }
+    };
 })(jQuery);
 
 

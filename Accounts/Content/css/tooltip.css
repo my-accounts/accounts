@@ -1,5 +1,4 @@
-﻿
-a.tooltip { color: #000; }
+﻿a.tooltip { color: #000; }
 a.tooltip b { display:none; }
 a.tooltip:hover { border:0; position:relative; z-index:500; text-decoration:none; }
 a.tooltip:hover b { display: block; position: absolute; /*top: 20px; */ left: 75px; padding: 5px; font-weight: normal; border:1px solid #888; background: #ffc; /*width: 350px;*/ }

@@ -1,5 +1,4 @@
-﻿@using Accounts
-@using Accounts.BLL
+﻿@using Accounts.BLL
 @model Accounts.Models.Entities.Record
 
 <tr data-id="@Model.RecordId">
@@ -7,26 +6,26 @@
     <td>@Model.Date.ToShortDateString()</td>
     
     <td class="reference"><div>@Model.Reference</div></td>
-    
-    <td>@(Model.IsIncome ? String.Empty : Model.Amount.ToString("C"))</td>
-    <td>@(Model.IsIncome ? Model.Amount.ToString("C") : String.Empty)</td>
-    <td class="type">@(StaticData.RecordTypes.First(i=>i.Id == StaticData.RecordSubtypes.First(k => k.SubtypeId == Model.SubtypeId).TypeId).Name)</td>
-    <td>
-        @Html.OptgroupSelect(StaticData.RecordSubtypes, Model.SubtypeId)
-    </td>
     <td>
         @if (Model.SubtypeId == 0)
         {
             <div class="addCategory popupHandler2 bglgr hand"></div>
-        }            
+        }           
     </td>
+    <td>@(Model.IsIncome ? String.Empty : Model.Amount.ToString("C"))</td>
+    <td>@(Model.IsIncome ? Model.Amount.ToString("C") : String.Empty)</td>
+    <td class="type">-= Unknown =-</td>
+    <td>
+        <select class="subtypes" data-old="0"><optgroup label="-= Unknown =-"><option selected="" value="0">-= Unknown =-</option></optgroup><optgroup label="Incomes"><option value="1">Gregory</option><option value="2">Computer People</option><option value="3">Triad Generic</option><option value="4">McGregorBoyal</option><option value="5">Personal Loan In</option><option value="6">Other Income</option></optgroup><optgroup label="Salary"><option value="7">Martin Miles HSBC</option><option value="8">Alex Zolotarev</option><option value="9">Miles RBS</option><option value="10">Personal Loan Out</option></optgroup><optgroup label="Housing"><option value="11">11 Nicholas Lodge</option><option value="12">Council Tax</option></optgroup><optgroup label="Transport"><option value="13">Trains &amp; Coaches</option><option value="14">Oyster TFL</option></optgroup><optgroup label="Travel"><option value="15">Aviation</option><option value="16">Rent a Car</option><option value="17">Fuel</option><option value="18">Hotels</option><option value="19">Visas</option><option value="20">Travel Insurance</option><option value="37">Travel Other</option></optgroup><optgroup label="Invoices"><option value="21">Software</option><option value="22">Individuals</option><option value="23">Legal Center</option><option value="24">Home Office</option><option value="36">Training</option></optgroup><optgroup label="Purchases"><option value="25">Shopping</option></optgroup><optgroup label="Banking"><option value="26">Service Charge</option><option value="27">Commercial Card</option></optgroup><optgroup label="Telecom"><option value="32">Mobile Phones</option><option value="33">BT</option><option value="34">Hosting</option><option value="35">Fitness</option></optgroup><optgroup label="Other"><option value="28">HMRC Paye</option><option value="29">Service Fees</option><option value="30">Penalties</option><option value="31">Losses</option></optgroup></select>
+    </td>
+                                
     <td class="comment">
         <div class="oh">
-            <div class="fl"><input class="rel u6" type="text" maxlength="250" value="@Model.Comment" title="@Model.Comment" /></div>
+            <div class="fl"><input type="text" title="@Model.Comment" value="@Model.Comment" maxlength="250" class="rel u6"></div>
             <div class="fl clearSearch cross hand"></div>
         </div>
     </td>
-    <td class="attach w100">
+    <td class="attach w50">
         @if (Model.Attachment.Length > 0)
         {
             @Html.Partial("_Attachment", Model.Attachment)
@@ -37,6 +36,6 @@
                 <div class="addFile"></div>
                 <input type="file"/>
             </div>
-        }
+        }        
     </td>
-</tr>  
+</tr>

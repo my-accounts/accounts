@@ -1,0 +1,64 @@
+﻿#table { margin-right: 60px;margin-bottom: 30px; }
+#table table { width: 100%; }
+#table tr { border-bottom-style: solid; border-color: #c0c0c0; border-width: 1px; height: 35px; line-height: 35px;font-size: 12px; }
+#table tr:not(:first-child):hover { background-color: #efefef; }
+#table th { height: 40px; line-height: 40px; text-align: left; padding-left: 7px; }
+#table td { padding-left: 7px; padding-right: 7px; }
+
+#table td.acc { white-space: nowrap; }
+#table td.type { white-space: nowrap; }
+
+
+#table td.reference { white-space: nowrap; overflow: hidden; }
+
+.attach a { color: #666; text-decoration: underline; }
+
+
+
+
+.addFile { 
+    width: 40px; height: 27px; border-radius: 5px; 
+    background-image: url('../img/upload@2x.png'); background-size: 19px 16px; background-repeat: no-repeat; background-position: 11px 5px; }
+
+
+.fileContainer { overflow: hidden; position: relative; width: 45px; }
+.fileContainer [type=file] {
+    cursor: inherit; display: block;
+    font-size: 999px;
+    filter: alpha(opacity=0); opacity: 0;
+    min-height: 100%;
+    min-width: 100%;
+    position: absolute; right: 0; top: 0;
+}
+
+
+.comment > div:first-child {
+    background-color: white;
+    width: 122px; height: 23px; border-radius: 5px; border: solid 0px #c5c5c5; 
+    background-image: url('../img/close@2x.png'); background-size: 8px 8px; background-repeat: no-repeat; background-position: 110px 7px;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2) inset, 0 0 0 1px rgba(0, 0, 0, 0.1) inset;
+}
+.comment input { border: none; margin-left: 5px; margin-right: 4px; width: 100px; color: #666; outline: none; }
+.comment .cross { width: 10px; height: 18px; margin-top: 2px; } 
+
+
+.addCategory { 
+    width: 40px; height: 27px; border-radius: 5px;  /*background-color: #25ac7e;*/
+    background-image: url('../img/edit@2x.png'); background-size: 24px 24px; background-repeat: no-repeat; background-position: 7px 0px; }
+
+.removeFile { width: 8px; height: 8px; background-image: url('../img/close@2x.png'); background-size: 8px 8px; margin: 13px 0px 0px 8px; }
+
+
+/* Shortened top HR for screens 1024 - 1220 */
+@media all and (max-width: 1220px) {
+    .tabSepa { margin-right: 10px; }
+    #table { margin-right: 10px; }
+}
+
+/* Do not show search panel on ipad */
+@media screen and (device-width: 768px) and (device-height: 1024px) /*and (orientation:landscape)*/ {
+    .commentHeader { display: none; }
+    .comment { display: none; }
+
+    #table td.reference { max-width: 90px; }
+}

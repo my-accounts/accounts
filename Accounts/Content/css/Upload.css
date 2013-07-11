@@ -1,14 +1,12 @@
 ﻿
 .header { height: 180px; background-color: #f3f3f3; margin: 0; font-family: Arial; }
 
-.header > div:first-child { width: 550px; width: 50%; margin: 0 auto; }
+.header > div:first-child { width: 50%; margin: 0 auto; }
+.header > div:first-child > div:first-child { width: 470px; }
 
-.header .icon { 
-    width: 125px; height: 180px;float: left;
-    background-image: url('../img/upload.png'); background-size: 64px 44px; background-position: 0px 40px; background-repeat: no-repeat;
-}
+.header .icon { width: 125px; height: 180px; background-image: url('../img/upload.png'); background-size: 64px 44px; background-position: 0px 40px; background-repeat: no-repeat; }
 
-.header .uploader { float: left; margin-top: 20px; color: #555;}
+.header .uploader { margin-top: 20px; color: #555;}
 .header .uploader > div { margin: 10px 0px 10px 0px;}
 
 .uploaderFirst { font-size: 16px; }

@@ -16,23 +16,25 @@
         {
             <div class="header">
                 <div>
-                    <div class="icon"></div>
-                    <div class="uploader">
-                        <div class="uploaderFirst dt">
-                            <div class="dtc">DROP FILES INTO THE ICON OR&nbsp;</div>
-                            <div class="dtc fileBlock hand">
-                                <div class="filePicker">BROWSE</div>
-                                <input type="file" name="files" multiple="multiple" />
-                                <input type="hidden" id="uploadCount" value="0" />
+                    <div class="dt">
+                        <div class="icon dtc"></div>
+                        <div class="uploader dtc">
+                            <div class="uploaderFirst dt">
+                                <div class="dtc">DROP FILES INTO THE ICON OR&nbsp;</div>
+                                <div class="dtc fileBlock hand">
+                                    <div class="filePicker">BROWSE</div>
+                                    <input type="file" name="files" multiple="multiple" />
+                                    <input type="hidden" id="uploadCount" value="0" />
+                                </div>
                             </div>
-                        </div>
-                        <div class="uploaderSecond">(Upload multiple bank statements)</div>
-                        <div class="oh" style="margin-top: 15px;">
-                            <div class="fl">
-                                @Html.SelectBox("company", StaticData.Companies)
-                            </div>
-                            <div class="fl">
-                                <input type="submit" value="UPLOAD FILES" class="uploadButton" />
+                            <div class="uploaderSecond">(Upload multiple bank statements)</div>
+                            <div class="oh" style="margin-top: 15px;">
+                                <div class="fl">
+                                    @Html.SelectBox("company", StaticData.Companies)
+                                </div>
+                                <div class="fl">
+                                    <input type="submit" value="UPLOAD FILES" class="uploadButton" />
+                                </div>
                             </div>
                         </div>
                     </div>

@@ -154,17 +154,21 @@
   <ItemGroup>
     <Content Include="Content\css\checkbox.css" />
     <Content Include="Content\css\global.css" />
-    <Content Include="Content\css\ipad.css" />
     <Content Include="Content\css\login.css" />
     <Content Include="Content\css\main.css" />
     <Content Include="Content\css\normalize.css" />
     <Content Include="Content\css\popup.css" />
     <Content Include="Content\css\Settings.css" />
     <Content Include="Content\css\styles.css" />
-    <Content Include="Content\css\tabs.css" />
+    <Content Include="Content\css\styles2.css" />
+    <Content Include="Content\css\stylesNew.css" />
     <Content Include="Content\css\tooltip.css" />
     <Content Include="Content\css\Upload.css" />
     <Content Include="Content\css\UserCabinet.css" />
+    <Content Include="Content\css\_dataBlock.css" />
+    <Content Include="Content\css\_left.css" />
+    <Content Include="Content\css\_top.css" />
+    <Content Include="Content\css\_topRight.css" />
     <Content Include="Content\img\account%402x.png" />
     <Content Include="Content\img\box.png" />
     <Content Include="Content\img\close%402x.png" />
@@ -174,6 +178,7 @@
     <Content Include="Content\img\iconGeneral.png" />
     <Content Include="Content\img\iconRegex.png" />
     <Content Include="Content\img\iconTypes.png" />
+    <Content Include="Content\img\icon_menu.png" />
     <Content Include="Content\img\index.png" />
     <Content Include="Content\img\patt.png" />
     <Content Include="Content\img\search%402x.png" />
@@ -270,6 +275,7 @@
     <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
+    <Content Include="newUI.html" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -288,7 +294,7 @@
     <Content Include="Views\Web.config" />
     <Content Include="Views\Shared\Layout.cshtml" />
     <Content Include="Views\User\Login.cshtml" />
-    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Home\Index2.cshtml" />
     <Content Include="Views\Home\_Data.cshtml" />
     <Content Include="Views\Home\_Attachment.cshtml" />
     <Content Include="Views\Home\_TableHeader.cshtml" />
@@ -331,6 +337,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Shared\_Scripts.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Home\Index.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

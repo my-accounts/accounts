@@ -1,0 +1,58 @@
+﻿#topPanel { height: 48px; background-color: #F3f3f3; padding-top: 6px; }
+
+#ipadMenu { background-image: url('../img/icon_menu.png'); background-size: 33px 32px;background-position: 10px 10px; background-repeat: no-repeat; width: 33px; height: 32px; display: none; }
+@media screen and (device-width: 768px) and (device-height: 1024px) /*and (orientation:landscape)*/ {
+    #ipadMenu { display: block; }
+}
+
+
+
+#summary { height: 40px; line-height: 40px; margin: 0px 12px 0px 12px; padding: 0px 7px 0px 7px; border-radius: 5px; background-color: #eaeaea; display: inline-block; }
+
+
+
+
+
+/*.triangle-border.left { margin-left: 00px; margin-right: 20px; }*/
+
+.triangle-border:before { border-color: #C5C5C5 transparent; border-style: solid; border-width: 20px 20px 0; bottom: -20px; content: ""; display: block; left: 40px; position: absolute; width: 0; }
+.triangle-border.left:after { border-width: 6px 9px 7px 0; left: -8px; top: 14px; border-color: transparent #FFFFFF; bottom: auto; }
+
+.triangle-border:after { border-color: #FFFFFF transparent; border-style: solid; border-width: 13px 13px 0; bottom: -13px; content: ""; display: block; left: 47px; position: absolute; width: 0; }
+
+.triangle-border.left:before { border-width: 7px 9px 6px 0; left: -9px; top: 13px; border-color: transparent #C5C5C5; bottom: auto; }
+
+
+.triangle-border { background: none repeat scroll 0 0 #FFFFFF; border: 1px solid #C5C5C5; border-radius: 6px; padding-left: 10px; position: relative; line-height: 38px; height: 40px; /*max-width: 800px;*/ }
+
+.bub { height: 31px; margin-top: 4px; border-radius: 4px; margin-left: 10px; line-height: 29px; text-align: center; padding-left: 10px; padding-right: 10px; } 
+.sum { background-color: #efefef; }
+.down { margin-right: 6px; }
+
+
+
+
+#search {
+    width: 250px; line-height: 38px; height: 40px;
+    margin: 0px 60px 0px 10px; padding-left: 30px; padding-right: 0px; 
+    border: 1px solid #C5C5C5; border-radius: 6px;
+    background-color: white; background-image: url('../img/search@2x.png'), url('../img/close@2x.png'); 
+    background-position: left top, right center; background-size: 27px 37px, 10px 10px; background-repeat: no-repeat; background-position: 0px 0px, 263px 14px;
+}
+#search input { border: none; outline: none; font-size: 16px; width: 225px; color: #666; margin-top: 9px; }
+#search .cross { width: 20px; height: 23px; margin-top: 7px; }
+
+
+/* Do not show search panel on ipad */
+@media screen and (device-width: 768px) and (device-height: 1024px) /*and (orientation:landscape)*/ {
+    #search { display: none; }
+}
+
+/* Shortened search box for screens 1024 - 1220 */
+@media all and (max-width: 1220px) {
+    #search { width: 100px; background-position: 0px 0px, 113px 14px; margin-right: 8px;}
+    #search input { width: 75px; }
+}
+
+
+

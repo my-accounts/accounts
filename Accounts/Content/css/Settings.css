@@ -2,7 +2,7 @@
 #left { background-color: #666;  }
 .lb { background: linear-gradient(to right, rgba(102, 102, 102, 0) 200px, #4C4C4C 218px) repeat scroll 0 0 transparent; }
 
-#topPanel span { color: #333; margin-left: 20px; margin-top: 10px;display: inline-block; }
+#topPanel > div:nth-child(2) { color: #333; margin-left: 20px; margin-top: 10px; display: inline-block; }
 
 .mi { width: 218px; height: 40px; margin-bottom: 1px; background-size: 24px 24px; background-position: 36px 8px; background-repeat: no-repeat; background-color: #434343;}
 .sel { background-color: #28bb89; }

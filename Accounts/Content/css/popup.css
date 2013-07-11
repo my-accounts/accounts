@@ -11,7 +11,7 @@
     right: 0; top: 0; bottom: 0; left: 0; opacity: 0;
     cursor: default; position: fixed; visibility: hidden; z-index: 1;
 }
-.popup { display: inline-block; opacity: 0; visibility: hidden; position: relative; top: 64px; left: 58px; z-index: 10; float: right; }
+.popup { display: inline-block; opacity: 0; visibility: hidden;  z-index: 999; float: right; position: absolute; top: 64px; right: 0px }
 
 
 
@@ -28,16 +28,19 @@
     border-right: 5px solid transparent;
     border-bottom: 5px solid white;
     width: 0; height: 0;
-    /* ie6 height fix */
+    
     font-size: 0;
     line-height: 0;
-    /* ie6 transparent fix */
+    
     _border-right-color: pink;
     _border-left-color: pink;
     _filter: chroma(color=pink);
 }
 
 .popup .callout .notch { left: 120px; }
+
+
+
 
 .border-callout { border: 1px solid #C1C1C1; /*padding: 17px 19px;*/ }
 .border-callout .border-notch { border-bottom-color: #818181; top: -6px; }

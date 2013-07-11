@@ -50,6 +50,11 @@ $(document).ready(function () {
     
     // Popup with overlay for user cabinet
     setPopupHandlers();
+
+    // Ipad menu shift handler
+    $(function () {
+        $('#ipadMenu').click(function () { $('#left').toggle(); });
+    });
     
     // Adjust size if browser changed size
     $(window).resize(function () {
@@ -67,6 +72,6 @@ function adjustSize() {
     //var leftHeight = $('#right').height() > $('#left').height() ? $('#right').height() : $('#left').height(); //1 $(document).height()  ? $('#right').height() : '100%';
     //var lh = leftHeight > $(document).height() ? leftHeight : /*$(document).height();*/ '100%';
 
-    $('#left').css('height', lh);
-    $('#content').css('height', $('#main').height() - 60);
+    var heightsToSet = $(document).height() - 60;
+    $('#left').css('height', heightsToSet);
 }

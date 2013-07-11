@@ -1,0 +1,33 @@
+﻿
+#left { background-color: #ededed; width: 218px; height: 100%; }
+
+
+.lb { background: linear-gradient(to right, rgba(226,226,226,0) 212px,rgba(200,200,200,1) 218px); }
+
+
+#filters div:first-child { padding: 20px 0px 0px 30px; font-size: 15.5px; height: 32px; }
+#filters div:first-child input[type="checkbox"]+label:before { box-shadow: inset 1px 1px 2px rgba(50,190,142,.3), inset 0 0 0 1px rgba(50,190,142,.2);  }
+.fc { background-color: #e2e2e2;}
+
+
+/* Separators (horizontal lines )*/
+.sepa3 { background-color: #d7d7d7;  height: 3px; margin-left: 40px !important; width: 150px !important; }
+div.sepa1 { background-color: #d7d7d7;  height: 1px; margin: 10px 0px 0px 0px; width: 150px !important; }
+.tabSepa { height: 3px; background-color: #d7d7d7; margin-right: 60px; }
+
+
+
+/* triangle sorting */
+.tr { background-image: url("../jqueryUI/images/ui-icons_222222_256x240.png"); height: 16px; width: 16px; position: relative; }
+.expand { background-position: -64px -16px; }
+.collapse { background-position: 0px -16px; }
+
+/* new expander collapser */
+.cls { display: inline-block; position: relative; left: 5px; }
+
+
+/* Do not show left panel on ipad */
+@media screen and (device-width: 768px) and (device-height: 1024px) {
+   #left { display: none; }
+}
+ 

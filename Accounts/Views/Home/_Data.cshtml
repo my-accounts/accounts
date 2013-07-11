@@ -1,17 +1,20 @@
 ﻿@model IEnumerable<Accounts.Models.Entities.Record>
-    
+                   
+<!-- Hidden fields -->
 <input type="hidden" id="totalIn" value="@Model.First().Amount.ToString("C")" />
 <input type="hidden" id="totalOut" value="@Model.First().SubtypeId.ToString("C")" />
 
 <div class="font12">@ViewBag.Amount</div>
 <div class="tabSepa"></div>
+
 <div id="table">
     <table>
         @Html.Partial("_TableHeader")
+
         @for (var j = 1; j < Model.Count(); j++)
         {
             var record = Model.ToArray()[j];
             @Html.Partial("_DataItem", record)
-        }    
+        } 
     </table>
 </div>
